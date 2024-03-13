@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
+</head>
+<body>
+    
+
+<form id="loginForm">
+    <img id="profile-icon" src="./img.jpg" alt="Profile Icon">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$" required>
+    <input type="checkbox" onclick="myFunction()">
+    <small>Password must be at least 6 characters and contain at least one uppercase letter, one lowercase letter, one number, and one special character.</small>
+    <div class="error" id="error-message"></div>
+
+    <button type="button" onclick="validateForm()">Submit</button>
+</form>
+
+<script src="main.js"></script>
+
+</body>
+</html>
